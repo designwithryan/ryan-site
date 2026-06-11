@@ -11,17 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Instrument+Serif:ital@1&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Handle GitHub Pages SPA routing via 404 redirect
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('from') && params.has('redirect')) {
+        const redirectPath = params.get('redirect');
+        sessionStorage.setItem('pendingRedirect', redirectPath);
+        // Clean up the URL
+        window.history.replaceState({}, document.title, '/');
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      // Handle GitHub Pages SPA routing
-      if (sessionStorage.redirect) {
-        const redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        window.location.href = redirect;
-      }
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

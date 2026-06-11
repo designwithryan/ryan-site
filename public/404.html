@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script>
-    // SPA redirect for GitHub Pages
-    // This redirects all 404s to index.html so React Router can handle routing
+    // SPA redirect for GitHub Pages - with loop prevention
     const path = window.location.pathname.replace(/\/$/, '');
     const isFile = path.split('/').pop().includes('.');
+    const isRedirecting = window.location.search.includes('from=404');
 
-    if (!isFile) {
-      sessionStorage.redirect = path;
-      window.location.href = '/index.html';
+    if (!isFile && !isRedirecting) {
+      // Redirect to index.html with the original path and a flag to prevent loops
+      window.location.href = '/?from=404&redirect=' + encodeURIComponent(path);
     }
   </script>
 </head>

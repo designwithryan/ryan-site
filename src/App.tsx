@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
 import { VideoBackground } from './components/VideoBackground'
@@ -22,10 +23,25 @@ function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
+function RedirectHandler() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const pendingRedirect = sessionStorage.getItem('pendingRedirect')
+    if (pendingRedirect) {
+      sessionStorage.removeItem('pendingRedirect')
+      navigate(pendingRedirect, { replace: true })
+    }
+  }, [navigate])
+
+  return null
+}
+
 function App() {
   return (
     <BrowserRouter>
       <Layout>
+        <RedirectHandler />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
