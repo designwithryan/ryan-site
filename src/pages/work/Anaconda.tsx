@@ -73,10 +73,10 @@ export function Anaconda() {
           Design Leadership · Aug 2022 – Jul 2026
         </p>
         <h1 className="font-sans font-bold text-[clamp(2.5rem,6vw,5.5rem)] tracking-tight text-primary leading-[1.02] max-w-4xl">
-          Building a Design Org From Nothing
+          Building a Design Organization From Nothing
         </h1>
         <p className="mt-6 text-xl md:text-2xl text-gray-200 font-light leading-snug max-w-2xl font-serif italic">
-          I didn't join a design org. I built one.
+          I didn't join a design organization. I built one.
         </p>
 
         {/* Meta strip */}
@@ -96,13 +96,30 @@ export function Anaconda() {
 
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-2">
-          {['Org Building', 'Design Systems', 'AI Strategy', 'Design Ops', 'UX Research', 'Team Leadership'].map((tag) => (
+          {['Organization Building', 'Design Systems', 'AI Strategy', 'Design Ops', 'UX Research', 'Team Leadership'].map((tag) => (
             <span key={tag} className="text-gray-400 text-xs tracking-widest uppercase font-light border border-gray-600/50 px-3 py-1.5 rounded-full">
               {tag}
             </span>
           ))}
         </div>
       </motion.div>
+
+      {/* Impact bar */}
+      <div className="border-t border-b border-primary/10 bg-primary/[0.03]">
+        <div className="max-w-[1400px] mx-auto px-8 py-10 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          {[
+            { number: '85%+', label: 'Design system adoption' },
+            { number: '99%', label: 'UI consistency across products' },
+            { number: '24%+', label: 'Velocity improvement' },
+            { number: '40%+', label: 'Handoff gap reduction' },
+          ].map(({ number, label }) => (
+            <div key={label} className="flex flex-col gap-1">
+              <p className="font-bold text-3xl md:text-4xl text-primary leading-none">{number}</p>
+              <p className="text-xs text-gray-200 font-light leading-snug mt-1">{label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* ── Chapter 1 ─────────────────────────────────────────────── */}
       <ChapterBanner number="1" title="The Design Organization" />
@@ -154,7 +171,7 @@ export function Anaconda() {
           </div>
           <div className="p-6 bg-primary/10 border border-primary/20 rounded-2xl">
             <p className="text-gray-200 text-xs tracking-[0.25em] uppercase font-light mb-3">Year 2</p>
-            <h3 className="font-bold text-base text-primary mb-5">Make the org self-sustaining</h3>
+            <h3 className="font-bold text-base text-primary mb-5">Make the organization self-sustaining</h3>
             <ul className="space-y-3">
               {[
                 'Build design system foundation',
@@ -186,7 +203,7 @@ export function Anaconda() {
           {[
             { title: 'Long-term design vision', desc: 'Where design needed to be in 3 years to serve a Series C, unicorn-stage company.' },
             { title: 'Design strategy', desc: 'How design would embed across product lines , not just support them.' },
-            { title: 'Operating model', desc: 'How the org would function, make decisions, and measure its own maturity.' },
+            { title: 'Operating model', desc: 'How the organization would function, make decisions, and measure its own maturity.' },
             { title: 'Strategic roadmap', desc: 'Phased plan from reactive execution to proactive product shaping.' },
           ].map(({ title, desc }) => (
             <div key={title} className="p-5 border border-primary/10 rounded-xl">
@@ -197,7 +214,7 @@ export function Anaconda() {
         </div>
 
         <div className="pt-10 border-t border-primary/8">
-          <p className="text-primary text-sm tracking-[0.25em] uppercase mb-2">Org Structure</p>
+          <p className="text-primary text-sm tracking-[0.25em] uppercase mb-2">Organization Structure</p>
           <h3 className="font-bold text-lg text-primary mb-2">Built with intention, not just speed</h3>
           <p className="text-sm text-gray-200 font-light mb-8 max-w-lg">
             Structured the growing team into four specialized groups , each with clear ownership, governance model, and success metrics.
@@ -242,7 +259,7 @@ export function Anaconda() {
 
       <Section label="The challenge">
         <p className="font-bold text-xl md:text-2xl text-primary leading-snug mb-5 max-w-2xl">
-          +9 products. Zero shared visual language. Years of independent decisions.
+          9+ products. Zero shared visual language. Years of independent decisions.
         </p>
         <div className="mb-8 p-5 bg-primary/10 border border-primary/20 rounded-xl">
           <p className="text-base text-primary font-bold">
@@ -272,7 +289,7 @@ export function Anaconda() {
 
       <Section label="How it was built">
         <p className="font-bold text-xl md:text-2xl text-primary leading-snug mb-10 max-w-2xl">
-          Initiated on the side. Adopted across the org. Built to last.
+          Initiated on the side. Adopted across the organization. Built to last.
         </p>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -361,7 +378,7 @@ export function Anaconda() {
               {[
                 { title: 'Additive architecture', desc: 'Each new library builds on the last. No big-bang cutovers. Each addition extends without breaking what exists.' },
                 { title: 'AI-plugged documentation', desc: 'Automated documentation pipeline , 4–6 hours per week saved. Auto-publish to GitHub + Mintlify on every release.' },
-                { title: 'Impact tied to org outcomes', desc: 'Every enhancement justified by cross-team impact, not just design team preference. Design proves its value in business terms.' },
+                { title: 'Impact tied to organization outcomes', desc: 'Every enhancement justified by cross-team impact, not just design team preference. Design proves its value in business terms.' },
               ].map(({ title, desc }) => (
                 <li key={title} className="flex gap-4">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/30 shrink-0" />
@@ -612,24 +629,36 @@ export function Anaconda() {
           The measure of a leader isn't what they built. It's what kept running after they left.
         </p>
         <p className="text-gray-200 text-base leading-relaxed mb-10 max-w-xl font-light">
-          Anaconda was acquired by Outerbounds in late 2025 , my position was eliminated as part of the acquisition-related reduction in force. Here is what remained:
+          Outerbounds was acquired by Anaconda in late 2025. The acquisition marked the end of this chapter. Here is what remained:
         </p>
-        <ul className="space-y-5 max-w-2xl">
+
+        {/* Top tier — 2 highlight cards */}
+        <div className="grid sm:grid-cols-2 gap-5 mb-5">
+          <div className="p-7 border border-primary/20 bg-primary/[0.04] rounded-2xl">
+            <p className="font-bold text-4xl text-primary mb-2">Zero → 16+</p>
+            <p className="text-sm text-gray-200 font-light leading-relaxed">Design organization built from scratch, structure and culture intact</p>
+          </div>
+          <div className="p-7 border border-primary/20 bg-primary/[0.04] rounded-2xl">
+            <p className="font-bold text-4xl text-primary mb-2">85%+</p>
+            <p className="text-sm text-gray-200 font-light leading-relaxed">Design system adoption across 10+ products, contribution model self-sustaining</p>
+          </div>
+        </div>
+
+        {/* Bottom tier — grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            'A design organization that went from zero to 16+ with culture shifted, structure, and systems intact',
-            '85%+ design system adoption across 10+ products , self-sustaining, with a contribution model running',
             'Four specialized groups with clear ownership, governance, and success metrics',
-            'A 55-initiative AI roadmap , fully documented, ready to execute',
+            '55-initiative AI roadmap, fully documented, ready to execute',
             'Clear hiring process and growth path for designers at every level',
-            'A complete merger plan , Outerbounds DS consolidation strategy, phased, documented, ready to continue',
-            'Design holds a chair at leadership level , embedded in executive decision-making',
+            'Complete Outerbounds merger plan, DS consolidation strategy, phased and documented',
+            'Design holds a chair at leadership level, embedded in executive decision-making',
           ].map((item) => (
-            <li key={item} className="flex gap-4 items-start">
-              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0" />
-              <p className="text-base text-gray-200 leading-relaxed font-light">{item}</p>
-            </li>
+            <div key={item} className="flex gap-3 items-start p-4 border border-primary/10 rounded-xl">
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/30 shrink-0" />
+              <p className="text-sm text-gray-200 leading-relaxed font-light">{item}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </Section>
 
       {/* CTA */}
@@ -637,7 +666,6 @@ export function Anaconda() {
       <div className="max-w-[1400px] mx-auto px-8 py-20 md:py-28 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
         <div>
           <p className="text-xl font-bold text-primary mb-2">Let's talk about what comes next.</p>
-          <p className="text-gray-200 font-light">Open to Design Director, CDO, and Head of Design opportunities.</p>
         </div>
         <div className="flex gap-4 shrink-0">
           <CopyEmailButton variant="cta" label="Get in touch" />

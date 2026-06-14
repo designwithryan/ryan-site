@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { experience, skills, competencies } from '../data/content'
+import { experience, skills } from '../data/content'
 
 export function Resume() {
   return (
@@ -14,30 +14,28 @@ export function Resume() {
           className="grid md:grid-cols-[200px_1fr] gap-10 md:gap-20 pb-16 border-b border-primary/10"
         >
           <p className="text-primary text-sm tracking-[0.3em] uppercase pt-1">Resume</p>
-          <div>
-            <h1 className="font-sans font-bold text-[clamp(2.5rem,4vw,3.5rem)] text-primary tracking-tight">
-              Ryan Mohammad
-            </h1>
-            <p className="mt-2 text-gray-200 text-base font-light">
-              Product Design Leader · AI-Enabled Design Systems, Enterprise Scaling & Cross-Functional Leadership
-            </p>
-            <p className="mt-1 text-gray-200 text-sm font-light">Berlin, Germany</p>
-            <div className="mt-5 flex flex-wrap gap-6">
-              <a href="mailto:ryanm@ryanmohammad.com" className="text-sm text-gray-200 hover:text-primary transition-colors font-light">
-                ryanm@ryanmohammad.com
-              </a>
-              <a href="tel:+4917658641277" className="text-sm text-gray-200 hover:text-primary transition-colors font-light">
-                +49 176 5864 1277
-              </a>
-              <a
-                href="https://linkedin.com/in/RyanMohammad"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-gray-200 hover:text-primary transition-colors font-light"
-              >
-                linkedin.com/in/RyanMohammad
-              </a>
+          <div className="flex items-start justify-between gap-6">
+            <div>
+              <h1 className="font-sans font-bold text-[clamp(2.5rem,4vw,3.5rem)] text-primary tracking-tight">
+                Ryan Mohammad
+              </h1>
+              <p className="mt-2 text-gray-200 text-base font-bold">
+                Product Design Leader · AI-Enabled Design Systems, Enterprise Scaling & Cross-Functional Leadership
+              </p>
             </div>
+            <a
+              href="https://linkedin.com/in/RyanMohammad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 mt-2 text-gray-200 hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
           </div>
         </motion.div>
 
@@ -54,22 +52,29 @@ export function Resume() {
           </p>
         </motion.div>
 
-        {/* Core Competencies */}
+        {/* Skills */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
           className="grid md:grid-cols-[200px_1fr] gap-10 md:gap-20 py-16 border-b border-primary/10"
         >
-          <p className="text-primary text-sm tracking-[0.3em] uppercase pt-1">Core Competencies</p>
-          <div className="flex flex-wrap gap-2">
-            {competencies.map((item) => (
-              <span
-                key={item}
-                className="text-xs px-3 py-1.5 border border-gray-600/50 text-gray-400 rounded-full font-light"
-              >
-                {item}
-              </span>
+          <p className="text-primary text-sm tracking-[0.3em] uppercase pt-1">Skills</p>
+          <div className="grid sm:grid-cols-2 gap-10">
+            {skills.map(({ category, items }) => (
+              <div key={category}>
+                <h3 className="text-xs tracking-[0.3em] uppercase text-primary font-light mb-4">{category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-xs px-3 py-1.5 border border-gray-600/50 text-gray-400 rounded-full font-light"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </motion.div>
@@ -107,33 +112,6 @@ export function Resume() {
           </div>
         </motion.div>
 
-        {/* Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="grid md:grid-cols-[200px_1fr] gap-10 md:gap-20 py-16 border-b border-primary/10"
-        >
-          <p className="text-primary text-sm tracking-[0.3em] uppercase pt-1">Skills</p>
-          <div className="grid sm:grid-cols-2 gap-10">
-            {skills.map(({ category, items }) => (
-              <div key={category}>
-                <h3 className="text-xs tracking-[0.3em] uppercase text-primary font-light mb-4">{category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((item) => (
-                    <span
-                      key={item}
-                      className="text-xs px-3 py-1.5 border border-gray-600/50 text-gray-400 rounded-full font-light"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Education */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -143,8 +121,7 @@ export function Resume() {
         >
           <p className="text-primary text-sm tracking-[0.3em] uppercase pt-1">Education</p>
           <div>
-            <h3 className="font-sans font-bold text-base text-primary">BBA , Business Administration</h3>
-            <p className="text-sm text-gray-200 font-light mt-1">JNU</p>
+            <h3 className="font-sans font-bold text-base text-primary">BBA, Business Administration - JNU</h3>
             <p className="text-sm text-gray-200 italic font-light mt-2">Never stopped learning…</p>
           </div>
         </motion.div>

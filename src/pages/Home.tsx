@@ -78,25 +78,6 @@ export function Home() {
           </Link>
         </motion.div>
 
-        {/* Stats */}
-        <div className="absolute bottom-8 right-8 flex gap-10">
-          {[
-            { number: '13+', label: 'Years' },
-            { number: '16+', label: 'Team built' },
-            { number: '55+', label: 'AI initiatives' },
-          ].map(({ number, label }) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1.1 }}
-              className="text-right"
-            >
-              <p className="font-bold text-xl text-gray-200">{number}</p>
-              <p className="text-gray-200 text-xs tracking-widest uppercase font-light">{label}</p>
-            </motion.div>
-          ))}
-        </div>
       </section>
 
       {/* Divider */}

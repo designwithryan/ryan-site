@@ -5,7 +5,7 @@ export const experience = [
     location: "Remote (Berlin)",
     period: "Aug 2022 – Jul 2026",
     highlights: [
-      "Helped build and grow the design org from 4 to 16+ designers across four specialized groups , co-defined org vision, strategy, and operating model with the design director during Series C expansion. Built hiring standards, onboarding, mentorship programs, and internal career frameworks.",
+      "Helped build and grow the design organization from 4 to 16+ designers across four specialized groups , co-defined organization vision, strategy, and operating model with the design director during Series C expansion. Built hiring standards, onboarding, mentorship programs, and internal career frameworks.",
       "Drove a four-year cultural shift from zero designers to design-essential: embedded in every roadmap and PI Planning cycle, design holds a leadership-level seat, and cross-functional teams request design proactively rather than being sold on it.",
       "Established governance models, success metrics, and clear ownership across four design groups, improving cross-functional alignment and delivery predictability across product and engineering.",
       "Self-initiated a 12-month, 55-initiative AI transformation across four design groups, coordinated four design managers, engineering, and product leadership.",
@@ -71,6 +71,8 @@ export const skills = [
       "Hiring & Career Frameworks",
       "Executive Stakeholder Management",
       "Cross-functional Leadership",
+      "AI-Assisted Workflows",
+      "Agile / PI Planning",
     ],
   },
   {
@@ -87,20 +89,20 @@ export const skills = [
     ],
   },
   {
-    category: "Technical",
+    category: "Tools",
     items: [
-      "AI-Assisted Workflows",
-      "Design Tokens & Figma",
-      "Agile / PI Planning",
-      "Accessibility (WCAG 2.2)",
+      "Figma",
+      "Miro",
+      "Notion",
+      "Jira",
+      "Claude Code",
+      "GitHub",
       "Storybook",
       "Kendo UI",
       "Astro / Starlight",
+      "Accessibility (WCAG 2.2)",
+      "Learning new tools everyday",
     ],
-  },
-  {
-    category: "Tools",
-    items: ["Figma", "Framer", "Miro", "Notion", "Linear", "Jira", "Claude Code"],
   },
 ];
 
@@ -129,7 +131,7 @@ export const philosophy = [
   { title: "Make design's value undeniable", body: "Not through advocacy. Through results. Metrics, business cases, and outcomes that leadership can't ignore." },
   { title: "Systems over moments", body: "The goal was never a better screen. It was infrastructure that keeps working long after the project ends." },
   { title: "Direction before perfection", body: "In ambiguous situations, I don't wait for clarity , I create it. A clear north star moves teams faster than a perfect plan." },
-  { title: "Grow the people, grow the org", body: "I invest in the people around me, closing skill gaps, building confidence, creating conditions where everyone does their best work." },
+  { title: "Grow the people, grow the organization", body: "I invest in the people around me, closing skill gaps, building confidence, creating conditions where everyone does their best work." },
   { title: "Vision is nothing without execution", body: "I build visions that teams believe in, then I build the environment to make them real. Strategy and delivery, together." },
 ];
 
@@ -150,9 +152,9 @@ export const LOGOS: Record<string, string> = {
 export const projects = [
   {
     slug: "anaconda",
-    title: "Building a Design Org From Nothing",
+    title: "Building a Design Organization From Nothing",
     category: "Design Leadership",
-    tags: ["Org Building", "Design Systems", "AI Strategy", "Design Ops"],
+    tags: ["Organization Building", "Design Systems", "AI Strategy", "Design Ops"],
     year: "2022–2026",
     company: "Anaconda, Inc.",
     logo: LOGOS.anaconda,

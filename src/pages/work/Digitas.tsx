@@ -123,7 +123,7 @@ export function Digitas() {
                 'The BRJ Design System , 60+ components, 50+ pattern groups',
                 'A phased launch plan for the unified platform',
                 'Production-ready high-fidelity designs with full handoff across Phase 1 scope',
-                "Internal team structure recommendation for BRJ's product org built for the scale of a unified platform",
+                "Internal team structure recommendation for BRJ's product organization built for the scale of a unified platform",
               ].map((item) => (
                 <li key={item} className="flex gap-4 items-start">
                   <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
