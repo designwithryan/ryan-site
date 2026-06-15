@@ -54,7 +54,7 @@ export function Work() {
               >
                 <div className="flex-1">
                   <div className="flex items-start gap-5 mb-3">
-                    <span className="text-primary/20 text-xs tracking-[0.2em] font-light mt-1 shrink-0">
+                    <span className="text-xs tracking-[0.2em] font-light mt-1 shrink-0" style={{ color: '#566266' }}>
                       0{i + 1}
                     </span>
                     <div className="flex-1">

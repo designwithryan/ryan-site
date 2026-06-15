@@ -24,7 +24,7 @@ function Divider() {
 function ChapterBanner({ number, title }: { number: string; title: string }) {
   return (
     <div className="max-w-[1400px] mx-auto px-8 py-10 md:py-14 flex items-end gap-6 border-t border-primary/10">
-      <span className="text-7xl md:text-8xl font-bold text-primary/5 leading-none select-none">{number}</span>
+      <span className="text-7xl md:text-8xl font-bold leading-none select-none" style={{ color: '#566266' }}>{number}</span>
       <div>
         <p className="text-primary text-sm tracking-[0.25em] uppercase mb-1">Chapter {number}</p>
         <h2 className="text-2xl md:text-3xl font-bold text-primary">{title}</h2>
